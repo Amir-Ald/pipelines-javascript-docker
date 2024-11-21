@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: amiraldpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: amiraldpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: amiraldpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: amiraldpipelinesjavascriptdocker 
+          image: mycontainerregistryaallahdad.azurecr.io/amiraldpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
